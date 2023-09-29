@@ -2,7 +2,7 @@
   "expo": {
     "name": "wallet-btc-haya",
     "slug": "wallet-btc-haya",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -15,16 +15,36 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pagecow.walletbtchaya",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan app QR codes."
+      },
+      "buildNumber": "4"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.pagecow.walletbtchaya",
+      "versionCode": 4
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "105c7bac-81b1-4512-b2fd-6ff22b164339"
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Khaya Wallet to access your camera to scan app QR codes."
+        }
+      ]
+    ]
   }
 }
